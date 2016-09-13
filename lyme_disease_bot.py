@@ -84,14 +84,14 @@ def main():
                     #print(test)
                 else:
                     # Print the author's name if it's not new
-                    #print(status.author.screen_name)
+                    print(status.author.screen_name)
                     
                     # Update the number of lyme tweets by adding 1
                     # Update the followers, friends, and tweets too
                     self.c.execute("UPDATE authors set lyme_tweets = lyme_tweets + 1,\
                     followers = {v2},\
                     friends = {v3},\
-                    tweet = {v4}\
+                    tweets = {v4}\
                     where author = '{v0}'"\
                     .format(v0 = status.author.screen_name, v2 = status.author.followers_count,\
                     v3 = status.author.friends_count, v4 = status.author.statuses_count))

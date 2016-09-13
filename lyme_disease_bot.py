@@ -88,9 +88,9 @@ def main():
                     
                     # Update the number of lyme tweets by adding 1
                     # Update the followers, friends, and tweets too
-                    self.c.execute("UPDATE authors set lyme_tweets = lyme_tweets + 1\
-                    followers = {v2}\
-                    friends = {v3}\
+                    self.c.execute("UPDATE authors set lyme_tweets = lyme_tweets + 1,\
+                    followers = {v2},\
+                    friends = {v3},\
                     tweet = {v4}\
                     where author = '{v0}'"\
                     .format(v0 = status.author.screen_name, v2 = status.author.followers_count,\
